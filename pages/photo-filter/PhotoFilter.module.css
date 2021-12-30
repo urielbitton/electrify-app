@@ -1,0 +1,42 @@
+.topBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--dark1);
+  height: 65px;
+  padding: 20px;
+}
+.topBar .logoImg {
+  object-fit: cover;
+}
+.topBar .socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.topBar button {
+  height: 40px;
+}
+.topBar button:hover {
+  filter: brightness(110%);
+}
+.topBar button i {
+  color: #fff;
+  margin-right: 10px;
+}
+.topBar .fb-btn {
+  background: #1877f2;
+}
+.topBar .insta-btn {
+  background: #c32aa3;
+}
+.topBar .github-btn {
+  background: #222;
+  padding: 10px 15px;
+}
+.topBar .github-btn i {
+  color: #eee;
+  font-size: 20px;
+  margin: 0;
+}

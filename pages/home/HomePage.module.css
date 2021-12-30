@@ -1,0 +1,44 @@
+.homePage > .grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 30px 0;
+}
+.homePage .titles {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.homePage .titles h1 {
+  text-transform: uppercase;
+  color: #eee;
+  font-weight: 500;
+  text-align: center;
+  font-size: 30px;
+}
+.homePage .titles h1 span {
+  color: var(--color);
+  font-size: 60px;
+}
+.homePage .titles h4 {
+  margin-top: 40px;
+  color: #999;
+  font-size: 20px;
+  font-weight: 400;
+}
+.homePage .cardsGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.homePage .footerText {
+  color: #aaa;
+  font-size: 13px;
+}
+.homePage .footerText a {
+  color: var(--color);
+}
