@@ -6,6 +6,7 @@
   background: var(--dark1);
   height: 65px;
   padding: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 .topBar .logoImg {
   object-fit: cover;
@@ -39,4 +40,104 @@
   color: #eee;
   font-size: 20px;
   margin: 0;
+}
+
+.filterApp {
+  width: 100%;
+  height: calc(100vh - 65px);
+  display: grid;
+  grid-template-columns: auto 30%;
+  overflow-x: hidden;
+}
+.filterApp .filterWindow {
+  width: 100%;
+  overflow-x: hidden;
+}
+.presetsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  overflow-x: hidden;
+  width: 500%;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: #111;
+  max-height: 300px;
+  transition: all 0.3s;
+}
+.presetsContainer.closed {
+  max-height: 0;
+  padding: 0 15px;
+}
+.filterPreset {
+  width: 100px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+  background: rgba(255,255,255,0.06)
+}
+.filterPreset:hover {
+  border-color: rgba(255,255,255,0.5);
+}
+.filterPreset.activePreset {
+  border-color: var(--color);
+}
+.filterPreset.filterPreset.activePreset h5 {
+  color: var(--color);
+}
+.filterPreset:hover h5 {
+  color: #fff;
+}
+.filterPreset h5 {
+  margin-top: 7px;
+  text-transform: capitalize;
+  color: rgba(255,255,255,0.7);
+  font-weight: 400;
+}
+
+.filterPreview {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+.previewTools {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.previewTools button {
+  background: none;
+  color: #ccc;
+}
+.previewTools button:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.previewTools button i {
+  margin-right: 7px;
+}
+.previewContainer {
+  margin-top: 20px;
+}
+.previewFooter {
+  margin-top: 20px;
+  top: 20px;
+}
+.previewFooter p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.filterApp .filterSidebar {
+  border-left: 1px solid rgba(255,255,255,0.04);
 }
