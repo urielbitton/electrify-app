@@ -8,11 +8,11 @@ export default function FilterWindow({presets, filterStates, image}) {
 
   const [activePreset, setActivePreset] = useState('normal')
   const [closePresets, setClosePresets] = useState(false)
-  const [
+  const {
     contrast, setContrast, brightness, setBrightness, saturate, setSaturate,
     sepia, setSepia, grayscale, setGrayscale, invert, setInvert, hueRotate, 
     setHueRotate, opacity, setOpacity, blur, setBlur
-  ] = filterStates
+   } = filterStates
 
   const imageFilters = { filter: 
     `contrast(${contrast}%) 

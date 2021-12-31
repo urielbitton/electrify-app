@@ -19,7 +19,7 @@ export default function PhotoFilter({presets}) {
   const [opacity, setOpacity] = useState(100)
   const [blur, setBlur] = useState(0)
 
-  const filterStates = [
+  const filterStates = {
     contrast, setContrast,
     brightness, setBrightness,
     saturate, setSaturate,
@@ -29,7 +29,7 @@ export default function PhotoFilter({presets}) {
     hueRotate, setHueRotate,
     opacity, setOpacity,
     blur, setBlur
-  ]
+  }
 
   return (
     <div className="photo-filter-page">

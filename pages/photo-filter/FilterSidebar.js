@@ -6,11 +6,11 @@ export default function FilterSidebar(props) {
 
   const { filterStates } = props
   const [tab, setTab] = useState('generator')
-  const [
+  const {
     contrast, setContrast, brightness, setBrightness, saturate, setSaturate,
     sepia, setSepia, grayscale, setGrayscale, invert, setInvert, hueRotate, 
     setHueRotate, opacity, setOpacity, blur, setBlur
-  ] = filterStates
+  } = filterStates
 
   return (
     <div className={styles.filterSidebar}>

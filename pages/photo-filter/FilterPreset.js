@@ -5,7 +5,8 @@ import filterImg from '../../assets/imgs/filter-img.jpg'
 
 export default function FilterPreset(props) {
 
-  const { name } = props.preset
+  // const { name } = props.preset
+  const name = 'Test'
   const { activePreset, setActivePreset, image } = props
 
   return (
