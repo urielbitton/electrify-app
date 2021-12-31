@@ -5,8 +5,8 @@ import filterImg from '../../assets/imgs/filter-img.jpg'
 
 export default function FilterPreset(props) {
 
-  const { img, name } = props.preset
-  const { activePreset, setActivePreset } = props
+  const { name } = props.preset
+  const { activePreset, setActivePreset, image } = props
 
   return (
     <div 
@@ -14,7 +14,7 @@ export default function FilterPreset(props) {
       onClick={() => setActivePreset(name)}
     >
       <Image 
-        src={img ?? filterImg} 
+        src={image ?? filterImg} 
         width="100px" 
         height="90px" 
         alt=""

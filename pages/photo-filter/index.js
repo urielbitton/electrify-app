@@ -8,6 +8,7 @@ import styles from './PhotoFilter.module.css'
 
 export default function PhotoFilter({presets}) {
 
+  const [image, setImage] = useState('')
   const [contrast, setContrast] = useState(100)
   const [brightness, setBrightness] = useState(100)
   const [saturate, setSaturate] = useState(100)
@@ -38,6 +39,7 @@ export default function PhotoFilter({presets}) {
         <FilterWindow 
           presets={presets} 
           filterStates={filterStates}
+          image={image}
         />
         <FilterSidebar 
           presets={presets} 

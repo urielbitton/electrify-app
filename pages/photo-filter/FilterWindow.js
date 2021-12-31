@@ -4,11 +4,10 @@ import FilterPreset from "./FilterPreset"
 import styles from './PhotoFilter.module.css'
 import filterImg from '../../assets/imgs/filter-img.jpg'
 
-export default function FilterWindow({presets, filterStates}) {
+export default function FilterWindow({presets, filterStates, image}) {
 
   const [activePreset, setActivePreset] = useState('normal')
   const [closePresets, setClosePresets] = useState(false)
-  const [mainImg, setMainImg] = useState('')
   const [
     contrast, setContrast, brightness, setBrightness, saturate, setSaturate,
     sepia, setSepia, grayscale, setGrayscale, invert, setInvert, hueRotate, 
@@ -32,6 +31,7 @@ export default function FilterWindow({presets, filterStates}) {
       preset={preset} 
       activePreset={activePreset}
       setActivePreset={setActivePreset}
+      image={image}
       key={i} 
     />
   })
