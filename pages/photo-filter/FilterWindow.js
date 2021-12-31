@@ -43,7 +43,7 @@ export default function FilterWindow({presets, filterStates, image}) {
   return (
     <div className={styles.filterWindow}>
       <div className={`${styles.presetsContainer} ${closePresets ? styles.closed : ""}`}>
-        {/* {filterPresetsRender} */}
+        {filterPresetsRender}
       </div>
       <div className={styles.filterPreview}>
         <div className={styles.previewTools}>
