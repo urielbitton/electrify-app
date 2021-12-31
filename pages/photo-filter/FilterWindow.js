@@ -66,7 +66,7 @@ export default function FilterWindow({presets, filterStates, image}) {
         </div>
         <div className={styles.previewContainer} style={imageFilters}>
           <Image 
-            src={mainImg.length ? mainImg : filterImg}
+            src={image.length ? image : filterImg}
             className="main-img"
             width={700}
             height={500}

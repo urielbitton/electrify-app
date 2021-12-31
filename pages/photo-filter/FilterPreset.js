@@ -14,9 +14,9 @@ export default function FilterPreset(props) {
       onClick={() => setActivePreset(name)}
     >
       <Image 
-        src={image ?? filterImg} 
-        width="100px" 
-        height="90px" 
+        src={image.length ? image : filterImg} 
+        width={100} 
+        height={90}
         alt=""
       />
       <h5>{name}</h5>
