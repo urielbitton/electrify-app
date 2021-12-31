@@ -18,6 +18,9 @@
   text-align: center;
   font-size: 30px;
 }
+.homePage .titles h1 i {
+  font-size: 49px;
+}
 .homePage .titles h1 span {
   color: var(--color);
   font-size: 60px;

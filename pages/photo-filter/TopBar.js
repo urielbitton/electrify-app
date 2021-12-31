@@ -8,13 +8,17 @@ export default function TopBar() {
   return (
     <div className={styles.topBar}>
       <div className={styles.logo}>
-        <Image 
-          src={electric} 
-          className={styles.logoImg} 
-          alt=""
-          width={30}
-          height={40}
-        />
+        <Link href="/home">
+          <a>
+            <Image 
+              src={electric} 
+              className={styles.logoImg} 
+              alt=""
+              width={30}
+              height={40}
+            />
+          </a>
+        </Link>
       </div>
       <div className={styles.socialContainer}>
         <button className={styles['fb-btn']}><i className="fab fa-facebook-f"></i>Share On Facebook</button>

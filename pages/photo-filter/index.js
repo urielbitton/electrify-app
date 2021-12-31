@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Meta from "../../components/Meta/Meta"
 import TopBar from "./TopBar"
 import FilterWindow from "./FilterWindow"
@@ -8,13 +8,41 @@ import styles from './PhotoFilter.module.css'
 
 export default function PhotoFilter({presets}) {
 
+  const [contrast, setContrast] = useState(100)
+  const [brightness, setBrightness] = useState(100)
+  const [saturate, setSaturate] = useState(100)
+  const [sepia, setSepia] = useState(0)
+  const [grayscale, setGrayscale] = useState(0)
+  const [invert, setInvert] = useState(0)
+  const [hueRotate, setHueRotate] = useState(0)
+  const [opacity, setOpacity] = useState(100)
+  const [blur, setBlur] = useState(0)
+
+  const filterStates = [
+    contrast, setContrast,
+    brightness, setBrightness,
+    saturate, setSaturate,
+    sepia, setSepia,
+    grayscale, setGrayscale,
+    invert, setInvert,
+    hueRotate, setHueRotate,
+    opacity, setOpacity,
+    blur, setBlur
+  ]
+
   return (
     <div className="photo-filter-page">
       <Meta title="Photo Filter - Electrify App"/>
       <TopBar />
       <div className={styles.filterApp}>
-        <FilterWindow presets={presets} />
-        <FilterSidebar presets={presets} />
+        <FilterWindow 
+          presets={presets} 
+          filterStates={filterStates}
+        />
+        <FilterSidebar 
+          presets={presets} 
+          filterStates={filterStates}
+        />
       </div>
     </div>
   )

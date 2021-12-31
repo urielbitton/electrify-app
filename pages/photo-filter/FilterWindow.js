@@ -4,11 +4,28 @@ import FilterPreset from "./FilterPreset"
 import styles from './PhotoFilter.module.css'
 import filterImg from '../../assets/imgs/filter-img.jpg'
 
-export default function FilterWindow({presets}) {
+export default function FilterWindow({presets, filterStates}) {
 
   const [activePreset, setActivePreset] = useState('normal')
   const [closePresets, setClosePresets] = useState(false)
   const [mainImg, setMainImg] = useState('')
+  const [
+    contrast, setContrast, brightness, setBrightness, saturate, setSaturate,
+    sepia, setSepia, grayscale, setGrayscale, invert, setInvert, hueRotate, 
+    setHueRotate, opacity, setOpacity, blur, setBlur
+  ] = filterStates
+
+  const imageFilters = { filter: 
+    `contrast(${contrast}%) 
+    brightness(${brightness}%) 
+    saturate(${saturate}%) 
+    sepia(${sepia}%) 
+    grayscale(${grayscale}%)
+    invert(${invert}%)
+    hue-rotate(${hueRotate}deg)
+    opacity(${opacity}%)
+    blur(${blur}px)`
+  }
 
   const filterPresetsRender = presets?.map((preset, i) => {
     return <FilterPreset 
@@ -18,6 +35,10 @@ export default function FilterWindow({presets}) {
       key={i} 
     />
   })
+
+  const downloadFilteredImg = () => {
+    
+  }
 
   return (
     <div className={styles.filterWindow}>
@@ -43,16 +64,23 @@ export default function FilterWindow({presets}) {
             </button>
           </div>
         </div>
-        <div className={styles.previewContainer}>
+        <div className={styles.previewContainer} style={imageFilters}>
           <Image 
             src={mainImg.length ? mainImg : filterImg}
+            className="main-img"
             width={700}
             height={500}
-            alt=""
+            alt="main-img"
+            title="Long click to see original version"
+            onMouseDown={() => console.log('show original')}
+            onMouseUp={() => console.log('revert to filtered image')}
           />
         </div>
         <div className={styles.previewFooter}>
-          <p>Created & Designed by Uriel Bitton.</p>
+          <button className="shadow-hover" onClick={() => downloadFilteredImg()}>
+            <i className="fal fa-download"></i>
+            Download Image
+          </button>
         </div>
       </div>
     </div>

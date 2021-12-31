@@ -28,7 +28,7 @@ export default function HomePage() {
     <div className={styles.homePage}>
       <div className={styles.grid}>
         <div className={styles.titles}>
-          <h1>Welcome to<br/><span>Electrify</span></h1>
+          <h1>Welcome to<br/><span>El<i className="fal fa-bolt"></i>ctrify</span></h1>
           <h4>Choose an app to get started</h4>
         </div>
         <div className={styles.cardsGrid}>
