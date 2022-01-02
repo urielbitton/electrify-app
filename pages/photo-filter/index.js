@@ -7,7 +7,7 @@ import { server } from "../../config"
 import styles from './PhotoFilter.module.css'
 import { presets } from '../api/filter-presets'
 
-export default function PhotoFilter({presets}) {
+export default function PhotoFilter() {
 
   const [image, setImage] = useState('')
   const [contrast, setContrast] = useState(100)
