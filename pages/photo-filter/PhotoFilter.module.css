@@ -115,15 +115,28 @@
   align-items: center;
   justify-content: space-between;
 }
-.previewTools button {
+.previewTools > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.previewTools button,
+.previewTools label {
   background: none;
   color: #ccc;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
-.previewTools button:hover {
+.previewTools button:hover,
+.previewTools label:hover {
   background: rgba(255,255,255,0.1);
   color: #fff;
 }
-.previewTools button i {
+.previewTools button i,
+.previewTools label i {
   margin-right: 7px;
 }
 .previewContainer {
@@ -143,7 +156,6 @@
   flex-direction: column;
 }
 .previewFooter button {
-  text-transform: uppercase;
   padding: 15px 25px;
 }
 .previewFooter button i {

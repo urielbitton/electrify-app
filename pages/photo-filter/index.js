@@ -6,10 +6,11 @@ import FilterSidebar from "../../components/Filters/FilterSidebar"
 import { server } from "../../config"
 import styles from './PhotoFilter.module.css'
 import { presets } from '../api/filter-presets'
+import filterImg from '../../assets/imgs/filter-img.jpg'
 
 export default function PhotoFilter() {
 
-  const [image, setImage] = useState('')
+  const [image, setImage] = useState(filterImg)
   const [contrast, setContrast] = useState(100)
   const [brightness, setBrightness] = useState(100)
   const [saturate, setSaturate] = useState(100)
@@ -41,6 +42,7 @@ export default function PhotoFilter() {
           presets={presets} 
           filterStates={filterStates}
           image={image}
+          setImage={setImage}
         />
         <FilterSidebar 
           presets={presets} 

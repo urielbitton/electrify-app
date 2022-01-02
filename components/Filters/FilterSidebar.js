@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import FilterSlider from "./FilterSlider"
 import styles from '../../pages/photo-filter/PhotoFilter.module.css'
+import { resetFilters } from "./resetFilters"
 
 export default function FilterSidebar(props) {
 
@@ -33,7 +34,7 @@ export default function FilterSidebar(props) {
           <div className={styles.filtersSection}>
             <div className={styles.sectionHead}>
               <h5>Filters</h5>
-              <span>Clear All</span>
+              <span onClick={() => resetFilters(filterStates)}>Clear All</span>
             </div>
             <FilterSlider 
               title="Contrast"
