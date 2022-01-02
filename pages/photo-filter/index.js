@@ -5,6 +5,7 @@ import FilterWindow from "../../components/Filters/FilterWindow"
 import FilterSidebar from "../../components/Filters/FilterSidebar"
 import { server } from "../../config"
 import styles from './PhotoFilter.module.css'
+import { presets } from '../api/filter-presets'
 
 export default function PhotoFilter({presets}) {
 
@@ -50,12 +51,12 @@ export default function PhotoFilter({presets}) {
   )
 }
 
-export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/filter-presets`)
-  const presets  = await res.json()
-  return {
-    props: {
-      presets
-    }
-  }
-}
+// export const getStaticProps = async () => {
+//   const res = await fetch(`${server}/api/filter-presets`)
+//   const presets  = await res.json()
+//   return {
+//     props: {
+//       presets
+//     }
+//   }
+// }

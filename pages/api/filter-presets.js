@@ -1,4 +1,4 @@
-const presets = [
+export const presets = [
   {name: 'normal'},
   {name: 'clarendon'},
   {name: 'moon'},
