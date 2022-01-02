@@ -1,6 +1,6 @@
 import Link from "next/link"
 import React from 'react'
-import HomeCard from "../../components/HomeCard/HomeCard"
+import HomeCard from '../../components/Home/HomeCard'
 import styles from './HomePage.module.css'
 
 export default function HomePage() {

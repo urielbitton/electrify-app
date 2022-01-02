@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React from 'react'
-import styles from './PhotoFilter.module.css'
+import styles from '../../pages/photo-filter/PhotoFilter.module.css'
 import electric from '../../assets/imgs/electric.png'
 import Link from "next/link"
 

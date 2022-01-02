@@ -4,7 +4,7 @@ import TopBar from "../../components/Filters/TopBar"
 import FilterWindow from "../../components/Filters/FilterWindow"
 import FilterSidebar from "../../components/Filters/FilterSidebar"
 import { server } from "../../config"
-import styles from '../../components/Filters/PhotoFilter.module.css'
+import styles from './PhotoFilter.module.css'
 import { presets } from "../api/filter-presets"
 
 export default function PhotoFilter() {

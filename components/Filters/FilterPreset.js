@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React from 'react'
-import styles from '../Filters/PhotoFilter.module.css'
+import styles from '../../pages/photo-filter/PhotoFilter.module.css'
 import filterImg from '../../assets/imgs/filter-img.jpg'
 
 export default function FilterPreset(props) {

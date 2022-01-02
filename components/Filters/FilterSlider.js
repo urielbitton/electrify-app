@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './PhotoFilter.module.css'
+import styles from '../../pages/photo-filter/PhotoFilter.module.css'
 import { Slider } from '@mui/material'
 
 export default function FilterSlider(props) {

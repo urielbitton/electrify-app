@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import FilterSlider from "./FilterSlider"
-import styles from '../Filters/PhotoFilter.module.css'
+import styles from '../../pages/photo-filter/PhotoFilter.module.css'
 
 export default function FilterSidebar(props) {
 
