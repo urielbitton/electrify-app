@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Meta from "../../components/Meta/Meta"
-import TopBar from "./TopBar"
-import FilterWindow from "./FilterWindow"
-import FilterSidebar from "./FilterSidebar"
+import TopBar from "../../components/Filters/TopBar"
+import FilterWindow from "../../components/Filters/FilterWindow"
+import FilterSidebar from "../../components/Filters/FilterSidebar"
 import { server } from "../../config"
-import styles from './PhotoFilter.module.css'
+import styles from '../../components/Filters/PhotoFilter.module.css'
 import { presets } from "../api/filter-presets"
 
 export default function PhotoFilter() {
