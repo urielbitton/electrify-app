@@ -1,4 +1,4 @@
-export const presets = [
+const presets = [
   {name: 'normal'},
   {name: 'clarendon'},
   {name: 'moon'},
@@ -14,6 +14,6 @@ export const presets = [
   {name: 'xpro2'},
 ]
 
-// export default function handler(req, res) {
-//   res.status(200).json(presets)
-// }
+export default function handler(req, res) {
+  res.status(200).json(presets)
+}
