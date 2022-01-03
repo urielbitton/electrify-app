@@ -45,3 +45,19 @@
 .homePage .footerText a {
   color: var(--color);
 }
+
+@media (max-width: 450px) {
+  .cardsGrid {
+    width: 95%;
+  }
+  .homePage .titles h1 span {
+    font-size: 50px;
+  }
+  .homePage .titles h1 i {
+    font-size: 40px;
+  }
+  .homePage .titles h4 {
+    text-align: center;
+    font-size: 15px;
+  }
+}

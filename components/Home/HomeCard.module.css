@@ -46,3 +46,9 @@
   opacity: 0;
   transition: all 0.4s;
 }
+
+@media (max-width: 450px) {
+  .HomeCard {
+    width: 90%;
+  }
+}

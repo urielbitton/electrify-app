@@ -26,14 +26,14 @@ export default function TopBar() {
           url="https://electrify-app.vercel.app/photo-filter"
           quote="CSS Filters for web designers"
         >
-          <button className={styles['fb-btn']}><i className="fab fa-facebook-f"></i>Share On Facebook</button>
+          <button className={styles['fb-btn']}><i className="fab fa-facebook-f"></i><span>Share On Facebook</span></button>
         </FacebookShareButton>
         <div className={styles['twitter-btn']}>
           <TwitterShareButton
             title="Check out the ultimate css filter tool fr web designers"
             url="https://electrify-app.vercel.app/photo-filter"
           >
-            <span><i className="fab fa-twitter"></i>Share On Twitter</span>
+            <span><i className="fab fa-twitter"></i><span>Share On Twitter</span></span>
           </TwitterShareButton>
         </div>
         <Link href="https://github.com/urielbitton">

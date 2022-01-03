@@ -72,7 +72,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 5px;
+  gap: 2px;
+  width: 100%;
   overflow: hidden;
   padding: 15px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -94,7 +95,8 @@
   border: 1px solid rgba(255,255,255,0.2);
   transition: all 0.3s;
   cursor: pointer;
-  background: rgba(255,255,255,0.06)
+  background: rgba(255,255,255,0.06);
+  user-select: none;
 }
 .filterPreset:hover {
   border-color: rgba(255,255,255,0.5);
@@ -223,12 +225,6 @@
   display: flex;
   flex-direction: column;
 }
-.generator {
-  
-}
-.cssCode {
-  
-}
 .filtersSection {
   display: flex;
   flex-direction: column;
@@ -325,4 +321,81 @@
 }
 .unsplashGrid .unsplashImg:hover {
   opacity: 0.85;
+}
+
+@media (max-width: 1500px) {
+  .presetsContainer {
+    width: 1520px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filterApp {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width: 770px) {
+  .previewContainer {
+    width: 95%;
+    min-height: 600px;
+  }
+  .previewContainer span {
+    height: 100%!important;
+  }
+  .previewFooter button {
+    display: none;
+  }
+  .filterSidebar {
+    width: 95%;
+    margin: auto;
+    border: none;
+  }
+  .previewTools {
+    width: 95%;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .previewTools > div {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .previewTools button,
+  .previewTools label {
+    background: rgba(255,255,255,0.06);
+  }
+}
+
+@media (max-width: 550px) {
+  .twitter-btn,
+  .fb-btn {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .twitter-btn span > span {
+    display: none;
+  }
+  .topBar button i {
+    margin: 0;
+  }
+  .fb-btn span {
+    display: none;
+  }
+  .fb-btn button i {
+    margin: 0;
+  }
+  .topBar .github-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .topBar .socialContainer {
+    gap: 8px;
+  }
 }

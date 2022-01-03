@@ -1,0 +1,11 @@
+.swiper {
+  will-change: transform;
+  user-select: none;
+  overflow-x: hidden;
+}
+.swiper.active {
+  cursor: grabbing;
+}
+.swiper::-webkit-scrollbar {
+  display: none;
+}

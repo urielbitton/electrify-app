@@ -7,6 +7,7 @@ import { resetFilters } from "./resetFilters"
 import AppModal from "../UI/AppModal"
 import { getUnsplashImages } from "../../services/unsplashServices"
 import { imgs } from '../../pages/api/unplashImgs'
+import Swiper from "../Layout/Swiper"
 
 export default function FilterWindow(props) {
 
@@ -93,9 +94,11 @@ export default function FilterWindow(props) {
 
   return (
     <div className={styles.filterWindow}>
-      <div className={`${styles.presetsContainer} ${closePresets ? styles.closed : ""}`}>
-        {filterPresetsRender}
-      </div>
+      <Swiper className={styles.presetsSwiper}>
+        <div className={`${styles.presetsContainer} ${closePresets ? styles.closed : ""}`}>
+          {filterPresetsRender}
+        </div>
+      </Swiper>
       <div className={styles.filterPreview}>
         <div className={styles.previewTools}>
           <div>
