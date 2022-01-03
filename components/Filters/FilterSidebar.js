@@ -117,7 +117,26 @@ export default function FilterSidebar(props) {
           </div>
         </div>
         <div className={`${styles.cssCode} ${styles.tabContent} ${tab === 'code' ? styles.show : ""}`}>
-          CSS Code
+          <div className={styles.cssSection}>
+            <h4>CSS</h4>
+            <div className={styles.codeContainer}>
+              <code>
+              {`.filter {
+                filter: ${contrast !== 100 ? `contrast(${contrast}%)` :""} ${brightness !== 100 ? `brightness(${brightness}%)` :""} ${saturate !== 100 ? `saturate(${saturate}%)` :""} ${sepia !== 0 ? `sepia(${sepia}%)` :""} ${grayscale !== 0 ? `grayscale(${grayscale}%)` :""} ${invert !== 0 ? `invert(${invert}%)` :""} ${hueRotate !== 0 ? `hue-rotate(${hueRotate}deg)` :""} ${opacity !== 100 ? `opacity(${opacity}px)` :""} ${blur !== 0 ? `blur(${blur}px)` :""};
+              }`}
+              </code>
+            </div>
+          </div>
+          <div className={styles.cssSection}>
+            <h4>Markup</h4>
+            <div className={styles.codeContainer}>
+              <code>
+              {`<figure>
+                <img src={...} />
+              </figure>`}
+              </code>
+            </div>
+          </div>
         </div>
       </div>
     </div>

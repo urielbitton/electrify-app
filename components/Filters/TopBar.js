@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../../pages/photo-filter/PhotoFilter.module.css'
 import electric from '../../assets/imgs/electric.png'
 import Link from "next/link"
+import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 export default function TopBar() {
   return (
@@ -21,8 +22,20 @@ export default function TopBar() {
         </Link>
       </div>
       <div className={styles.socialContainer}>
-        <button className={styles['fb-btn']}><i className="fab fa-facebook-f"></i>Share On Facebook</button>
-        <button className={styles['insta-btn']}><i className="fab fa-instagram"></i>Share On Instagram</button>
+        <FacebookShareButton
+          url="https://electrify-app.vercel.app/photo-filter"
+          quote="CSS Filters for web designers"
+        >
+          <button className={styles['fb-btn']}><i className="fab fa-facebook-f"></i>Share On Facebook</button>
+        </FacebookShareButton>
+        <div className={styles['twitter-btn']}>
+          <TwitterShareButton
+            title="Check out the ultimate css filter tool fr web designers"
+            url="https://electrify-app.vercel.app/photo-filter"
+          >
+            <span><i className="fab fa-twitter"></i>Share On Twitter</span>
+          </TwitterShareButton>
+        </div>
         <Link href="https://github.com/urielbitton">
           <a target="_blank">
             <button className={styles['github-btn']}><i className="fab fa-github"></i></button>

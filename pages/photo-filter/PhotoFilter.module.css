@@ -29,8 +29,23 @@
 .topBar .fb-btn {
   background: #1877f2;
 }
-.topBar .insta-btn {
-  background: #c32aa3;
+.topBar .twitter-btn {
+  background: #00acee;
+  border-radius: 10px;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.topBar .twitter-btn:hover {
+  filter: brightness(110%);
+}
+.topBar .twitter-btn span {
+  color: #fff;
+  font-size: 13px;
+  font-family: inherit;
 }
 .topBar .github-btn {
   background: #222;
@@ -58,13 +73,13 @@
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
-  overflow-x: hidden;
-  width: 500%;
+  overflow: hidden;
   padding: 15px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   background: #111;
   max-height: 300px;
   transition: all 0.3s;
+  user-select: none;
 }
 .presetsContainer.closed {
   max-height: 0;
@@ -266,4 +281,40 @@
   border: none;
   color: rgba(255,255,255,0.6);
   font-size: 12px;
+}
+
+.cssSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.cssSection h4 {
+  color: #ddd;
+  font-weight: 500;
+  font-size: 16px;
+}
+.cssSection .codeContainer {
+  width: 100%;
+  padding: 20px 25px;
+  background: var(--dark1);
+  color: rgba(255,255,255,0.6);
+  line-height: 2;
+  font-size: 13px;
+  white-space:pre-line
+}
+
+.unsplashGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  width: 100%;
+  grid-gap: 1px;
+}
+.unsplashImg {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.unsplashGrid .unsplashImg:hover {
+  opacity: 0.85;
 }
