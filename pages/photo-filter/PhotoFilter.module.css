@@ -262,17 +262,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  user-select: none;
 }
 .filterSlider h6 {
   font-size: 13px;
   font-weight: 400;  
   color: rgba(255,255,255,0.6);
+  user-select: none;
 }
 .filterSlider .manualValue {
   width: 55px;
   height: 31px;
   background: var(--dark1);
   border-radius: 5px;
+  user-select: none;
 }
 .filterSlider .manualValue input {
   width: 100%;
@@ -281,7 +284,12 @@
   border: none;
   color: rgba(255,255,255,0.6);
   font-size: 12px;
+  user-select: none;
 }
+.filterSlider input[type=range] {
+  cursor: e-resize;
+}
+
 
 .cssSection {
   display: flex;

@@ -23,8 +23,8 @@ export default function FilterWindow(props) {
    } = filterStates
   const inputRef = useRef()
 
-  const imageFilters = { filter: 
-    `contrast(${contrast}%) 
+  const imageFilters = `
+    contrast(${contrast}%)
     brightness(${brightness}%) 
     saturate(${saturate}%) 
     sepia(${sepia}%) 
@@ -32,15 +32,17 @@ export default function FilterWindow(props) {
     invert(${invert}%)
     hue-rotate(${hueRotate}deg)
     opacity(${opacity}%)
-    blur(${blur}px)`
-  }
+    blur(${blur}px)
+  `
 
   const filterPresetsRender = presets?.map((preset, i) => {
     return <FilterPreset 
       preset={preset} 
+      onClick={() => applyPresetFilters(preset)}
       activePreset={activePreset}
       setActivePreset={setActivePreset}
       image={image}
+      imageFilters={imageFilters}
       key={i}
     />
   })
@@ -71,9 +73,17 @@ export default function FilterWindow(props) {
     setShowUnsplash(false)
   }
 
-  useEffect(() => {
-    resetFilters(filterStates)
-  },[image])
+  const applyPresetFilters = (preset) => {
+    setContrast(preset.contrast)
+    setBrightness(preset.brightness)
+    setSaturate(preset.saturate)
+    setSepia(preset.sepia)
+    setGrayscale(preset.grayscale)
+    setInvert(preset.invert)
+    setHueRotate(preset.hueRotate)
+    setOpacity(preset.opacity)
+    setBlur(preset.blur)
+  }
 
   useEffect(() => {
     // getUnsplashImages('mountain')
@@ -110,14 +120,13 @@ export default function FilterWindow(props) {
             </button>
           </div>
         </div>
-        <div className={styles.previewContainer} style={imageFilters}>
+        <div className={styles.previewContainer} style={{filter: imageFilters}}>
           <Image 
             src={image}
             className="main-img"
             width={700}
             height={500}
             alt="main-img"
-            title="Long click to see original version"
             onMouseDown={() => console.log('show original')}
             onMouseUp={() => console.log('revert to filtered image')}
           />
